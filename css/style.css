@@ -1,0 +1,253 @@
+/* Custom CSS for Portfolio Website */
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding-top: 76px; /* Account for fixed navbar */
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, hsl(229, 66%, 55%) 0%, #ef5757 100%);
+    min-height: 100vh;
+    padding: 100px 0;
+    padding-top: 100px !important;
+}
+
+.profile-image-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+/* Cards */
+.skill-card, .project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Projects Hero */
+.projects-hero {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+/* Custom height utility */
+.min-vh-70 {
+    min-height: 70vh;
+}
+
+/* Social Links */
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Form Validation */
+.was-validated .form-control:valid {
+    border-color: #28a745;
+}
+
+.was-validated .form-control:invalid {
+    border-color: #dc3545;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode .card {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    border: 1px solid #444;
+}
+
+body.dark-mode .bg-light {
+    background-color: #2d2d2d !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 80px 0;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .profile-image {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Tech Stack Badges */
+.tech-stack .badge {
+    margin-right: 0.3rem;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+}
+
+/* Enhanced Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .navbar {
+    background-color: #1a1a1a !important;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+body.dark-mode .bg-light {
+    background-color: #1e1e1e !important;
+    color: #ffffff;
+}
+
+body.dark-mode .text-muted {
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+body.dark-mode .btn-outline-primary {
+    color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+body.dark-mode .form-control {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #ffffff;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #b0b0b0;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #2d2d2d;
+    border-color: #0d6efd;
+    color: #ffffff;
+}
+
+body.dark-mode .hero-section {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+body.dark-mode .projects-hero {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a !important;
+    border-top: 1px solid #333;
+}
+
+body.dark-mode .social-links a {
+    color: #b0b0b0 !important;
+}
+
+body.dark-mode .social-links a:hover {
+    color: #0d6efd !important;
+}
+
+body.dark-mode .progress {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .badge {
+    color: #ffffff;
+}
+
+/* Ensure all text is visible in dark mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode .card-title,
+body.dark-mode .card-text,
+body.dark-mode .lead {
+    color: #ffffff !important;
+}
+
+/* Navbar text in dark mode */
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+    color: #ffffff !important;
+}
+
+body.dark-mode .nav-link:hover {
+    color: #0d6efd !important;
+}
